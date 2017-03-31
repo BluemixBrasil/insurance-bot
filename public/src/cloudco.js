@@ -54,7 +54,11 @@ function register() {
         } else {
             var response = JSON.parse(xhr.responseText);
             console.error('Server error for passport. Return status of: ', xhr.statusText);
-            message.innerHTML = response.message;
+            if (typeof response.message === "string") {
+              message.innerHTML = response.message;
+            }else {
+              message.innerHTML = response.message.message;
+            }
         }
 
         return false;
@@ -101,8 +105,12 @@ function login() {
                 password = '';
             }
         } else {
-            message.innerHTML = response.message;
             console.error('Server error for passport. Return status of: ', xhr.statusText);
+            if (typeof response.message === "string") {
+              message.innerHTML = response.message;
+            }else {
+              message.innerHTML = response.message.message;
+            }
         }
 
         return false;
