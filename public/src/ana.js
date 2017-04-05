@@ -83,13 +83,13 @@ function userMessage(message) {
 
         } else {
             console.error('Server error for Conversation. Return status of: ', xhr.statusText);
-            displayMessage("I ran into an error. Could you please try again.", watson);
+            displayMessage("Putz, deu um tilt aqui. Você pode tentar novamente.", watson);
         }
     };
 
     xhr.onerror = function() {
         console.error('Network error trying to send message!');
-        displayMessage("I can't reach my brain right now. Try again in a few minutes.", watson);
+        displayMessage("Ops, acho que meu cérebro está offline. Espera um minutinho para continuarmos por favor.", watson);
     };
 
     console.log(JSON.stringify(params));
