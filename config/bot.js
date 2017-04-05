@@ -333,7 +333,7 @@ function buildContextObject(req, callback) {
                 message = message.toFixed(2);
                 message = message.toString();
             } else {
-                reprompt.message = "You didn't enter a valid amount. Please enter the amount paid for the procedure.";
+                reprompt.message = "Você não passou um valor. Me passe a quantia paga pelo procedimento por favor.";
                 return callback(null, reprompt);
             }
         } else if (context.claim_step === "date") {
@@ -351,7 +351,7 @@ function buildContextObject(req, callback) {
 
             // If the date is NaN reprompt for correct format
             if (isNaN(userDate)) {
-                reprompt.message = "That doesn't look like a date. Please try again.";
+                reprompt.message = "Acho que isto não é uma data. Eu fui treinada pelo tio Sam, então preciso receber a data no formato YYYY-MM-DD, tipo 1985-10-26. Pode enviar a data novamente?";
                 return callback(null, reprompt);
             } else if (userDate) {
                 userDate.setHours(cDate.getHours());
@@ -361,7 +361,7 @@ function buildContextObject(req, callback) {
                 console.log("Date:", userDate);
                 // If user tries to claim a date in the future
                 if (userDate.getTime() > cDate.getTime()) {
-                    reprompt.message = "Sorry, Marty McFly, you can't make a claim in the future. Please try the date again.";
+                    reprompt.message = "Desculpa, Marty McFly, você não pode pedir um reembolso do futuro. Digite novamente a data.";
                     return callback(null, reprompt);
                 } else { // Otherwise format the date to YYYY-MM-DD - Ana will also verify
                     var month = '' + (userDate.getUTCMonth() + 1),
@@ -378,7 +378,7 @@ function buildContextObject(req, callback) {
                     message = [year, month, day].join('-');
                 }
             } else {
-                reprompt.message = "That doesn't look like a valid date. Please try again.";
+                reprompt.message = "Acho que isto não é uma data. Eu fui treinada pelo tio Sam, então preciso receber a data no formato YYYY-MM-DD, tipo 1985-10-26. Pode enviar a data novamente?";
                 return callback(null, reprompt);
             }
         }
