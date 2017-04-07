@@ -4,7 +4,7 @@
 | ----- | ----- |
 | **dev** | [![Build Status](https://travis-ci.org/IBM-Bluemix/insurance-bot.svg?branch=dev)](https://travis-ci.org/IBM-Bluemix/insurance-bot) |
 
-Esse repositório é parte do projeto maior [Cloud Insurance Co.](https://github.com/IBM-Bluemix/cloudco-insurance).
+Esse repositório é parte do projeto maior [Cloud Insurance Co.](https://github.com/BluemixBrasil/cloudco-insurance).
 
 # Visão Geral
 
