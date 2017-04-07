@@ -19,12 +19,12 @@ Ou se preferir, pode enviar apenas a aplicação seguindo os passos abaixo.
 
 1. Baixe e Instale a ferramenta [Cloud Foundry CLI][cloud_foundry_url].
 
-1. O app depende dos microsserviços de [Catálogo](https://github.com/IBM-Bluemix/insurance-catalog) e [Demandas](https://github.com/IBM-Bluemix/insurance-orders). Certifique-se de enviá-los ao Bluemix primeiro.
+1. O app depende dos microsserviços de [Catálogo](https://github.com/carlosbu/insurance-catalog) e [Demandas](https://github.com/carlosbu/insurance-orders). Certifique-se de enviá-los ao Bluemix primeiro.
 
 1. Clone a aplicação para seu ambiente de trabalho pelo terminal de comandos usando o seguinte comando:
 
   ```
-  git clone https://github.com/IBM-Bluemix/insurance-bot.git
+  git clone https://github.com/carlosbu/insurance-bot.git
   ```
 
 1. `cd` insira-seu-diretório
@@ -83,7 +83,7 @@ E voila! Você tem sua própria versão do app rodando no Bluemix.
 
 1. Caso ainda não tenha baixado o node [clique aqui para baixar][download_node_url] e instalar em sua máquina.
 
-1. O app depende dos microsserviços de [Catálogo](https://github.com/IBM-Bluemix/insurance-catalog) e [Demandas](https://github.com/IBM-Bluemix/insurance-orders). Certifique-se de enviá-los ao Bluemix primeiro.
+1. O app depende dos microsserviços de [Catálogo](https://github.com/carlosbu/insurance-catalog) e [Demandas](https://github.com/carlosbu/insurance-orders). Certifique-se de enviá-los ao Bluemix primeiro.
 
 1. Crie um serviço cloudant no Bluemix
 
@@ -159,9 +159,9 @@ Os dados coletados do arquivo `package.json` na aplicação e as variáveis do a
 
 O rastreador de envio pode ser removido deletando a linha `require("cf-deployment-tracker-client").track();` do início do arquivo `app.js`.
 
-[toolchain_url]: https://github.com/IBM-Bluemix/insurance-toolchain
+[toolchain_url]: https://github.com/carlosbu/insurance-toolchain
 [bluemix_reg_url]: http://ibm.biz/insurance-store-registration
 [cloud_foundry_url]: https://github.com/cloudfoundry/cli
 [download_node_url]: https://nodejs.org/download/
-[issues_url]: https://github.com/ibm-bluemix/insurance-bot/issues
+[issues_url]: https://github.com/carlosbu/insurance-bot/issues
 [travis_url]: https://travis-ci.org/
